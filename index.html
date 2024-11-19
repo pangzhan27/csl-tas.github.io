@@ -170,7 +170,10 @@
       <div class="column is-four-fifths">
         <div class="content has-text-justified">
           <p>
-             We build a transition-based confusion tensor to assess both class-level and transition-level learning state during training using the corresponding accuracy on training set.
+             A Cost-sensitive Learning with Constraint is formulated to mitigate both class-level and transition-level biases. We propose a new learning objective to mitigate class-level learning bias. The objective is to maximize per-class accuracy max, ensuring equal attention to all classes.
+            To further reduce the biased transition learning, we define transition constraints to penalize under-learned transitions(those whose accuracies are below the average) and thus reduce the learning variance.
+            We resort to Lagrangian formulation to relax the constraints, and reformulate the problem as an equivalent Lagrangian min-max problem. The Lagrangian is solved iteratively by optimizing the neural model $f$ and the multipliers $\lambda$.
+and minimizing λ while keeping f fixed
           </p>
         </div>
       </div>
@@ -198,7 +201,7 @@
         <h2 class="title is-3">Evaluation</h2>
         <div class="content has-text-justified">
           <p>
-             Our method is evaluated on several datasets and metrics. Our work shows good performance on (1) tail class performance without sacrificing head performance. (2) per class performance as well as global performance. (3) good head-tail and frame-segment performance trade-offs
+             Our method is evaluated on several datasets and metrics. Our work shows good performance on (1) per class performance as well as global performance. (2) tail class performance without sacrificing head performance.
           </p>
         </div>
       </div>
@@ -228,7 +231,7 @@
           
           <div class="publication-video">
             <!-- Youtube embed code here -->
-            <iframe src="https://www.youtube.com/embed/GDvmpA2p8L4" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            <iframe src="https://www.youtube.com/embed/EJ06N0z5Ows" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
           </div>
         </div>
       </div>
@@ -243,9 +246,9 @@
     <div class="container is-max-desktop content">
       <h2 class="title">BibTeX</h2>
       <pre><code>@article{pang2024long,
-        title={Long-Tail Temporal Action Segmentation with Group-wise Temporal Logit Adjustment},
+        title={Cost-Sensitive Learning for Long-Tailed Temporal Action Segmentation},
         author={Zhanzhong Pang and Fadime Sener and Shrinivas Ramasubramanian and Angela Yao},
-        journal={arXiv preprint arXiv:2408.09919},
+        journal={BMVC},
         year={2024}}</code></pre>
     </div>
 </section>
