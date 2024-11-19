@@ -75,7 +75,7 @@
                     <div class="publication-links">
                          <!-- Arxiv PDF link -->
                       <span class="link-block">
-                        <a href="static/pdfs/supp.pdf" target="_blank"
+                        <a href="static/pdfs/paper.pdf" target="_blank"
                         class="external-link button is-normal is-rounded is-dark">
                         <span class="icon">
                           <i class="fas fa-file-pdf"></i>
@@ -105,19 +105,6 @@
 </section>
 
 
-<!-- Teaser video-->
-<section class="hero teaser">
-  <div class="container is-max-desktop">
-    <div class="hero-body">
-      <img src="static/images/teaser.png" alt="MY ALT TEXT"/>
-      <h2 class="subtitle has-text-centered">
-         (a) Long-tail action distribution on Breakfast. The long-tail distribution results in low accuracy on tail actions with AsFormer. (b) Left: Head-tail loss curve shows slow convergence rate on tail actions, demonstrating the class-level learning bias. Right: Action ‘take_eggs’ from tail shows skewed transition distribution(pie chart), i.e., different transitions from { ‘SIL’, ‘pour_oil’, ‘take_bowl’} to ‘take_eggs’, and transition learning bias(loss curve, where common transition from ‘pour_oil’ are better learned than ‘take_bowl’)
-      </h2>
-    </div>
-  </div>
-</section>
-<!-- End teaser video -->
-
 <!-- Paper abstract -->
 <section class="section hero is-light">
   <div class="container is-max-desktop">
@@ -137,8 +124,9 @@
 <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
-      <img src="static/images/motive.png" alt="MY ALT TEXT"/>
+      <img src="static/images/teaser.png" alt="MY ALT TEXT"/>
       <h2 class="subtitle has-text-centered">
+        (a) Long-tail action distribution on Breakfast. The long-tail distribution results in low accuracy on tail actions with AsFormer. (b) Left: Head-tail loss curve shows slow convergence rate on tail actions, demonstrating the class-level learning bias. Right: Action ‘take_eggs’ from tail shows skewed transition distribution(pie chart), i.e., different transitions from { ‘SIL’, ‘pour_oil’, ‘take_bowl’} to ‘take_eggs’, and transition learning bias(loss curve, where common transition from ‘pour_oil’ are better learned than ‘take_bowl’)
       </h2>
     </div>
   </div>
@@ -157,7 +145,7 @@
         <h2 class="title is-3">Methods</h2>
         <div class="content has-text-justified">
           <p>
-             Our proposed Group-wise Temporal Logit Adjustment. (1) Group-wise classification, leveraging class co-occurrence priors to mitigate activity irrelevent false positives. (2) Temporal logit adjustment, leveraging action ordering priors to mitigate temporal illogical false positives.
+             Our build a transition-based confusion tensor to assess both class-level and transition-level learning state during training using the corresponding accuracy on training set.
           </p>
         </div>
       </div>
@@ -168,12 +156,38 @@
 <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
-      <img src="static/images/method.png" alt="MY ALT TEXT"/>
+      <img src="static/images/tensor.png" alt="MY ALT TEXT"/>
       <h2 class="subtitle has-text-centered">
       </h2>
     </div>
   </div>
 </section>
+
+  <section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Methods</h2>
+        <div class="content has-text-justified">
+          <p>
+             Our build a transition-based confusion tensor to assess both class-level and transition-level learning state during training using the corresponding accuracy on training set.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <img src="static/images/tensor.png" alt="MY ALT TEXT"/>
+      <h2 class="subtitle has-text-centered">
+      </h2>
+    </div>
+  </div>
+</section>
+
 <!-- End paper method -->
 
 <!-- Paper results -->
